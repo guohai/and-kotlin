@@ -2,15 +2,18 @@ package org.xkit.demo.kotlin
 
 import android.app.Activity
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.TextView
 
 public class ActivityMain : Activity() {
 
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        var kotlinVersionLabel: TextView? = findViewById(R.id.kotlin_version) as TextView
+        kotlinVersionLabel!!.setText("Do not know how to get Kotlin version programmatically")
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

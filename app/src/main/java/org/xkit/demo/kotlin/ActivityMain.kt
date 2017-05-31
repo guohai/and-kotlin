@@ -6,14 +6,14 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
 
-public class ActivityMain : Activity() {
+class ActivityMain : Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var kotlinVersionLabel: TextView? = findViewById(R.id.kotlin_version) as TextView
-        kotlinVersionLabel!!.setText("Do not know how to get Kotlin version programmatically")
+        val kotlinVersionLabel: TextView? = findViewById(R.id.kotlin_version) as TextView
+        kotlinVersionLabel!!.setText("Kotlin version " + KotlinVersion.CURRENT)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
